@@ -28,31 +28,35 @@ const divisao = () => {
 };
 </script>
 <template>
-	<div class="flex flex-col justify-center items-center">
-		<h1>Index</h1>
-		<label class="form-control w-full max-w-xs">
-			<div class="label">
-				<span class="label-text">Número 1</span>
-			</div>
-			<input v-model="num1" type="number" placeholder="" class="input input-bordered input-primary w-full max-w-xs" />
-		</label>
+	<ion-page>
+		<div class="flex flex-col justify-center items-center">
+			<h1>Index</h1>
+			<label class="form-control w-full max-w-xs">
+				<div class="label">
+					<span class="label-text">Número 1</span>
+				</div>
+				<input v-model="num1" type="number" placeholder=""
+					class="input input-bordered input-primary w-full max-w-xs" />
+			</label>
 
-		<label class="form-control w-full max-w-xs">
-			<div class="label">
-				<span class="label-text">Número 2</span>
-			</div>
-			<input v-model="num2" type="number" placeholder="" class="input input-bordered input-primary w-full max-w-xs" />
-		</label>
+			<label class="form-control w-full max-w-xs">
+				<div class="label">
+					<span class="label-text">Número 2</span>
+				</div>
+				<input v-model="num2" type="number" placeholder=""
+					class="input input-bordered input-primary w-full max-w-xs" />
+			</label>
 
-		<div class="join my-12">
-			<button @click="soma" class="btn btn-info join-item">Soma</button>
-			<button @click="subtracao" class="btn btn-success join-item">Subtração</button>
-			<button @click="multiplicacao" class="btn btn-warning join-item">Multiplicação</button>
-			<button @click="divisao" class="btn btn-error join-item">Divisão</button>
+			<div class="join my-12">
+				<button @click="soma" class="btn btn-info join-item">Soma</button>
+				<button @click="subtracao" class="btn btn-success join-item">Subtração</button>
+				<button @click="multiplicacao" class="btn btn-warning join-item">Multiplicação</button>
+				<button @click="divisao" class="btn btn-error join-item">Divisão</button>
+			</div>
+
+			<h2>Result: {{ result }}</h2>
+			<NuxtLink to="/completa">Ir para calculadora completa</NuxtLink>
 		</div>
-
-		<h2>Result: {{ result }}</h2>
-		<NuxtLink to="/users">Users</NuxtLink>
-	</div>
+	</ion-page>
 </template>
 <style scoped></style>
